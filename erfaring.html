@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Erfaring &middot; Simone Juel Jantzen</title>
 <meta name="description" content="Simone Juel Jantzens erfaring &ndash; kommunikation og social media hos Kunsthal Aarhus og en r&aelig;kke kultur- og kommunikationsprojekter.">
+<meta name="theme-color" content="#3d2b2e">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Erfaring &middot; Simone Juel Jantzen">
@@ -18,29 +19,31 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">G&aring; til indhold</a>
 <header>
-<nav>
+<nav aria-label="Hovedmenu">
 <a class="brand" href="index.html">Simone Juel Jantzen</a>
 <ul>
 <li><a href="index.html">Forside</a></li>
 <li><a href="om-mig.html">Om mig</a></li>
-<li><a href="erfaring.html" class="active">Erfaring</a></li>
+<li><a href="erfaring.html" class="active" aria-current="page">Erfaring</a></li>
 </ul>
 </nav>
-<div class="wave-divider">
+</header>
+<div class="wave-divider" aria-hidden="true">
 <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 <path class="wave-fill" d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,50 L1440,100 L0,100 Z"></path>
 </svg>
 </div>
-</header>
-<main>
+<main id="main">
 <div class="page-hero">
-<img class="page-photo" src="images/profil.jpg" alt="Simone Juel Jantzen">
+<img class="page-photo" src="images/profil.jpg" alt="Portr&aelig;t af Simone Juel Jantzen" width="394" height="394">
 <h1>Erfaring</h1>
 </div>
+<p class="print-contact">simone.jantzen@gmail.com &middot; linkedin.com/in/simone-juel-jantzen-4143561b1</p>
 
 <section>
-<h4 class="group-title"><span class="num">01.</span> Kunsthal Aarhus</h4>
+<h2 class="group-title"><span class="num">01.</span> Kunsthal Aarhus</h2>
 
 <div class="job job--current">
 <h3>Communications Officer &amp; Online Manager <span class="current-badge">Nuv&aelig;rende</span></h3>
@@ -63,7 +66,7 @@
 </section>
 
 <section>
-<h4 class="group-title"><span class="num">02.</span> Kommunikation &amp; presse</h4>
+<h2 class="group-title"><span class="num">02.</span> Kommunikation &amp; presse</h2>
 
 <div class="job">
 <h3>Kommunikationsr&aring;dgiver, Sindslidendes Vilk&aring;r</h3>
@@ -94,7 +97,7 @@
 </section>
 
 <section>
-<h4 class="group-title"><span class="num">03.</span> Undervisning &amp; formidling</h4>
+<h2 class="group-title"><span class="num">03.</span> Undervisning &amp; formidling</h2>
 
 <div class="job">
 <h3>Instrukt&oslash;r, Struer Karate Klub</h3>
@@ -116,16 +119,22 @@
 </section>
 
 <section class="cta-block">
-<h4>Lad os snakke</h4>
+<h2>Lad os snakke</h2>
 <p>Altid klar p&aring; en snak om kommunikation, kultur eller gode historier.</p>
 <div class="cta-row">
 <a class="btn btn-primary" href="mailto:simone.jantzen@gmail.com">Skriv til mig</a>
 <a class="btn btn-outline" href="https://www.linkedin.com/in/simone-juel-jantzen-4143561b1/" target="_blank" rel="noopener">LinkedIn</a>
+<button type="button" class="btn btn-quiet" id="printBtn" hidden>Gem som PDF</button>
 </div>
 </section>
 </main>
 <footer>
 <p>&copy; 2026 Simone Juel Jantzen</p>
 </footer>
+<script>
+var printBtn = document.getElementById("printBtn");
+printBtn.hidden = false;
+printBtn.addEventListener("click", function () { window.print(); });
+</script>
 </body>
 </html>
