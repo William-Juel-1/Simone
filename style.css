@@ -489,6 +489,9 @@ section {
 }
 
 .btn {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
   display: inline-block;
   padding: 0.7rem 1.25rem;
   border-radius: 999px;
